@@ -5,7 +5,7 @@ import TechIcon from '../ui/TechIcon.astro';
 const topSkills = ["React", "React Native", "JavaScript", "TypeScript", "Node.js"];
 ---
 
-<section class="py-20 px-4">
+<section class="py-20 px-4 bg-[#303446]">
   <div class="max-w-6xl mx-auto">
     <div class="flex flex-col lg:flex-row items-center gap-12">
       <!-- Imagen - 40% -->
@@ -28,7 +28,7 @@ const topSkills = ["React", "React Native", "JavaScript", "TypeScript", "Node.js
 
       <!-- Información - 60% -->
       <div class="lg:w-3/5 text-center lg:text-left">
-        <h1 class="text-2xl md:text-3xl lg:text-4xl font-bold mb-2 bg-gradient-to-t from-[#ca9ee6] to-[#eebebe] bg-clip-text text-transparent">
+        <h1 class="text-2xl md:text-3xl lg:text-4xl font-bold mb-2 bg-gradient-to-t from-[#ca9ee6] to-[#ef9f76] bg-clip-text text-transparent">
           {portfolioData.personal.name}
         </h1>
         <p class="text-lg mb-4 text-[#b5bfe2]">
@@ -53,7 +53,7 @@ const topSkills = ["React", "React Native", "JavaScript", "TypeScript", "Node.js
 
         <div class="flex justify-center lg:justify-start flex-wrap gap-2 mb-6">
           {topSkills.map((tech) => (
-            <span class="flex items-center gap-1.5 text-xs px-3 py-1 rounded-full border border-[#51576d] text-[#b5bfe2] bg-[rgba(65,69,89,0.3)]">
+            <span class="flex items-center gap-1.5 text-xs px-3 py-1 rounded-full border border-[#51576d] text-[#a5adce] bg-[#414559]/30">
               <TechIcon tech={portfolioData.techIcons[tech] || tech} />
               {tech}
             </span>

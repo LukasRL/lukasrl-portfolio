@@ -2,52 +2,52 @@
 import { portfolioData } from '../../data/portfolio';
 ---
 
-<header class="sticky top-0 z-50 backdrop-blur border-b border-[#414559] bg-[rgba(35,38,52,0.95)]">
-  <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+<header class="sticky top-0 z-50 backdrop-blur border-b border-theme-surface0 bg-theme-tertiary/95">
+  <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between" id="hero">
     <!-- Logo y nombre -->
     <div class="flex items-center gap-4 min-w-0">
       <div class="relative">
-        <div class="w-10 h-10 rounded-full flex items-center justify-center text-white font-bold text-sm shadow-lg ring-2 ring-[rgba(186,187,241,0.3)] bg-gradient-to-br from-[#babbf1] to-[#ca9ee6]">
+        <div class="w-10 h-10 rounded-full flex items-center justify-center text-white font-bold text-sm shadow-lg ring-2 ring-[var(--accent-lavender)]/30 bg-gradient-to-br from-[var(--accent-lavender)] to-[var(--accent-mauve)]">
           {portfolioData.personal.initials}
         </div>
-        <div class="absolute -bottom-0.5 -right-0.5 w-3 h-3 rounded-full border-2 border-[#303446] bg-[#a6e3a1]"></div>
+        <div class="absolute -bottom-0.5 -right-0.5 w-3 h-3 rounded-full border-2 border-theme-primary bg-theme-green"></div>
       </div>
-      <h1 class="font-bold text-xl whitespace-nowrap text-[#c6d0f5]">
+      <h1 class="font-bold text-xl whitespace-nowrap text-theme-primary">
         {portfolioData.personal.name.split(' ')[0]} {portfolioData.personal.name.split(' ')[1]}
       </h1>
     </div>
 
     <!-- Navegación -->
     <nav class="hidden lg:flex items-center gap-6 flex-1 justify-center max-w-2xl">
-      <a href="#about" class="transition-colors text-sm font-medium whitespace-nowrap hover:opacity-80 text-[#a5adce]">
+      <a href="#about" class="transition-colors text-sm font-medium whitespace-nowrap hover:text-theme-maroon text-theme-tertiary">
         Sobre Mí
       </a>
-      <a href="#experience" class="transition-colors text-sm font-medium whitespace-nowrap hover:opacity-80 text-[#a5adce]">
+      <a href="#experience" class="transition-colors text-sm font-medium whitespace-nowrap hover:text-theme-maroon text-theme-tertiary">
         Experiencia
       </a>
-      <a href="#skills" class="transition-colors text-sm font-medium whitespace-nowrap hover:opacity-80 text-[#a5adce]">
+      <a href="#skills" class="transition-colors text-sm font-medium whitespace-nowrap hover:text-theme-maroon text-theme-tertiary">
         Habilidades
       </a>
-      <a href="#projects" class="transition-colors text-sm font-medium whitespace-nowrap hover:opacity-80 text-[#a5adce]">
+      <a href="#projects" class="transition-colors text-sm font-medium whitespace-nowrap hover:text-theme-maroon text-theme-tertiary">
         Proyectos
       </a>
-      <a href="#education" class="transition-colors text-sm font-medium whitespace-nowrap hover:opacity-80 text-[#a5adce]">
+      <a href="#education" class="transition-colors text-sm font-medium whitespace-nowrap hover:text-theme-maroon text-theme-tertiary">
         Educación
       </a>
-      <a href="#contact" class="transition-colors text-sm font-medium whitespace-nowrap hover:opacity-80 text-[#a5adce]">
+      <a href="#contact" class="transition-colors text-sm font-medium whitespace-nowrap hover:text-theme-maroon text-theme-tertiary">
         Contacto
       </a>
     </nav>
 
     <div class="flex items-center gap-2 min-w-0">
-      <button class="text-xs px-3 py-2 border border-[#414559] hover:opacity-80 bg-transparent text-[#a5adce] rounded-md transition-all flex items-center gap-1.5">
-        <svg class="w-3 h-3 text-[#ea999c]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+      <button class="text-xs px-3 py-2 border border-theme-surface0 hover:bg-theme-surface1 hover:text-theme-primary bg-transparent text-theme-tertiary rounded-md transition-all font-medium flex items-center gap-1.5">
+        <svg class="w-3 h-3 text-theme-maroon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path>
         </svg>
         ES
       </button>
-      <a href="#contact" class="text-xs px-3 py-2 border border-[#414559] hover:bg-[#414559] hover:text-[#c6d0f5] bg-transparent text-[#a5adce] rounded-md transition-all font-medium flex items-center gap-1.5">
-        <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <a href="#contact" class="text-xs px-3 py-2 border border-theme-surface0 hover:bg-theme-surface1 hover:text-theme-primary bg-transparent text-theme-tertiary rounded-md transition-all font-medium flex items-center gap-1.5">
+        <svg class="w-3 h-3 text-theme-maroon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
         </svg>
         Contacto

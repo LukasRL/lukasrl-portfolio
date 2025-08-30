@@ -1,6 +1,4 @@
-# 🚀 Portafolio de Lukas Riveros - Astro
-
-Un portafolio profesional desarrollado en **Astro** siguiendo principios **SOLID** y **Clean Code**.
+# 🚀 Portafolio - Lukas Riveros - Astro
 
 ## ✨ Características
 

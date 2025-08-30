@@ -1,0 +1,28 @@
+---
+import { portfolioData } from '../../data/portfolio';
+import ExperienceItem from './ExperienceItem.astro';
+---
+
+<section id="experience" class="py-24 px-4 border-t-2 border-[#414559]">
+  <div class="max-w-4xl mx-auto">
+    <div class="text-left mb-12">
+      <h2 class="text-3xl font-bold flex items-center gap-3 text-[#c6d0f5]">
+        <svg class="w-8 h-8 text-[#ea999c]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2H10a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+        </svg>
+        Experiencia
+      </h2>
+    </div>
+
+    <div class="relative mx-auto">
+      <!-- Línea del timeline -->
+      <div class="absolute left-6 top-0 bottom-0 w-0.5 bg-[#51576d]"></div>
+
+      <div class="space-y-8">
+        {portfolioData.jobs.map((job, index) => (
+          <ExperienceItem job={job} index={index} isExpanded={false} />
+        ))}
+      </div>
+    </div>
+  </div>
+</section>

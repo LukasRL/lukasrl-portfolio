@@ -1,0 +1,139 @@
+---
+import { portfolioData } from '../../data/portfolio';
+import TechIcon from '../ui/TechIcon.astro';
+
+export interface Props {
+  job: {
+    title: string;
+    company: string;
+    period: string;
+    location: string;
+    description: string;
+    skills: string[];
+  };
+  index: number;
+  isExpanded: boolean;
+}
+
+const { job, index, isExpanded } = Astro.props;
+---
+
+<div class="relative">
+  <div class={`absolute left-4 w-4 h-4 rounded-full border-2 ${index === 0 ? "animate-pulse" : ""}`}
+       class:list={[
+         index === 0 ? "bg-[#a6e3a1] border-[#a6e3a1]" : "bg-[#414559] border-[#51576d]"
+       ]}
+       style={index === 0 ? "box-shadow: 0 0 10px rgba(166, 227, 161, 0.5)" : ""}>
+  </div>
+
+  <div class="ml-12">
+    <div class="bg-[#414559] border border-[#51576d] rounded-lg overflow-hidden">
+      <!-- Header del acordeón -->
+      <div class="p-6 cursor-pointer hover:bg-[#51576d] transition-colors" 
+           data-expandable="true" 
+           data-job-index={index}>
+        <div class="flex justify-between items-start">
+          <div class="flex-1">
+            <h3 class="text-xl font-semibold text-[#c6d0f5] mb-2">
+              {job.title}
+            </h3>
+            <div class="flex flex-wrap gap-4 text-[#a5adce] text-sm">
+              <span class="font-medium">{job.company}</span>
+              <span class="flex items-center gap-1">
+                <svg class="w-4 h-4 text-[#ea999c]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                </svg>
+                {job.period}
+              </span>
+              <span class="flex items-center gap-1">
+                <svg class="w-4 h-4 text-[#ea999c]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                </svg>
+                {job.location}
+              </span>
+              {index === 0 && (
+                <span class="text-xs px-2 py-1 rounded-full font-medium bg-[rgba(166,227,161,0.2)] text-[#a6e3a1]">
+                  Actualidad
+                </span>
+              )}
+            </div>
+          </div>
+          
+          <!-- Icono de expandir/contraer -->
+          <div class="ml-4 text-[#ea999c] transition-transform duration-200 transform" 
+               data-icon-container>
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Contenido expandible -->
+      <div class="border-t border-[#51576d] transition-all duration-300 overflow-hidden"
+           class:list={[
+             isExpanded ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+           ]}>
+        <div class="p-6 pt-4">
+          <p class="text-[#b5bfe2] mb-4">{job.description}</p>
+          
+          <div class="flex flex-wrap gap-2">
+            {job.skills.map((skill) => (
+              <span class="flex items-center gap-1.5 px-3 py-1 rounded-full text-sm border border-[#51576d] text-[#b5bfe2]">
+                <TechIcon tech={portfolioData.techIcons[skill] || skill} />
+                {skill}
+              </span>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Funcionalidad del acordeón
+  document.addEventListener('DOMContentLoaded', () => {
+    const expandableItems = document.querySelectorAll('[data-expandable="true"]');
+    
+    expandableItems.forEach(item => {
+      item.addEventListener('click', () => {
+        const content = item.parentElement?.querySelector('.border-t');
+        const iconContainer = item.querySelector('[data-icon-container]');
+        
+        if (content && iconContainer) {
+          const isExpanded = content.classList.contains('max-h-96');
+          
+          // Cerrar todos los otros acordeones
+          document.querySelectorAll('.border-t').forEach(otherContent => {
+            if (otherContent !== content) {
+              otherContent.classList.remove('max-h-96', 'opacity-100');
+              otherContent.classList.add('max-h-0', 'opacity-0');
+            }
+          });
+          
+          // Resetear todos los iconos
+          document.querySelectorAll('[data-icon-container]').forEach(otherIconContainer => {
+            if (otherIconContainer !== iconContainer) {
+              otherIconContainer.classList.remove('rotate-180');
+            }
+          });
+          
+          // Toggle del acordeón actual
+          if (isExpanded) {
+            content.classList.remove('max-h-96', 'opacity-100');
+            content.classList.add('max-h-0', 'opacity-0');
+            iconContainer.classList.remove('rotate-180');
+            console.log('Cerrando acordeón, removiendo rotate-180');
+          } else {
+            content.classList.remove('max-h-0', 'opacity-0');
+            content.classList.add('max-h-96', 'opacity-100');
+            iconContainer.classList.add('rotate-180');
+            console.log('Abriendo acordeón, agregando rotate-180');
+          }
+        }
+      });
+    });
+  });
+</script>

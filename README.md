@@ -1,43 +1,147 @@
-# Astro Starter Kit: Minimal
+# 🚀 Portafolio de Lukas Riveros - Astro
 
-```sh
-pnpm create astro@latest -- --template minimal
+Un portafolio profesional desarrollado en **Astro** siguiendo principios **SOLID** y **Clean Code**.
+
+## ✨ Características
+
+- **🚀 Astro**: Framework moderno para sitios estáticos
+- **🎨 Tailwind CSS**: Sistema de diseño utilitario
+- **📱 Responsive**: Diseño adaptativo para todos los dispositivos
+- **🎯 SOLID**: Arquitectura limpia y mantenible
+- **⚡ Performance**: Sitio estático optimizado
+- **🌙 Dark Theme**: Paleta de colores Catppuccin Frappé
+
+## 🏗️ Arquitectura SOLID
+
+### Single Responsibility Principle (SRP)
+
+- Cada componente tiene una responsabilidad específica
+- Separación clara entre datos, presentación y lógica
+
+### Open/Closed Principle (OCP)
+
+- Fácil extensión sin modificar código existente
+- Sistema de tipos TypeScript para validación
+
+### Dependency Inversion Principle (DIP)
+
+- Componentes desacoplados y reutilizables
+- Datos centralizados en archivos separados
+
+## 📁 Estructura del Proyecto
+
+```
+src/
+├── components/          # Componentes reutilizables
+│   ├── layout/         # Componentes de layout (Header, Footer)
+│   ├── sections/       # Secciones del portafolio (Hero, About, etc.)
+│   └── ui/            # Componentes de interfaz básicos
+├── data/               # Datos del portafolio
+├── layouts/            # Layouts de Astro
+├── pages/              # Páginas de la aplicación
+├── types/              # Definiciones de tipos TypeScript
+├── utils/              # Utilidades y helpers
+└── styles/             # Estilos globales
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## 🚀 Instalación
 
-## 🚀 Project Structure
+```bash
+# Clonar el repositorio
+git clone <tu-repositorio>
+cd lukasrl-portfolio
 
-Inside of your Astro project, you'll see the following folders and files:
+# Instalar dependencias
+pnpm install
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
+# Ejecutar en desarrollo
+pnpm dev
+
+# Construir para producción
+pnpm build
+
+# Preview de producción
+pnpm preview
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## 🎨 Personalización
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+### Colores
 
-Any static assets, like images, can be placed in the `public/` directory.
+El proyecto usa la paleta **Catppuccin Frappé**:
 
-## 🧞 Commands
+- `--color-primary`: #babbf1 (Lavender)
+- `--color-secondary`: #ca9ee6 (Mauve)
+- `--color-accent`: #ea999c (Red)
+- `--color-success`: #a6e3a1 (Green)
 
-All commands are run from the root of the project, from a terminal:
+### Datos del Portafolio
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `pnpm install`             | Installs dependencies                            |
-| `pnpm dev`             | Starts local dev server at `localhost:4321`      |
-| `pnpm build`           | Build your production site to `./dist/`          |
-| `pnpm preview`         | Preview your build locally, before deploying     |
-| `pnpm astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `pnpm astro -- --help` | Get help using the Astro CLI                     |
+Edita `src/data/portfolio.ts` para personalizar:
 
-## 👀 Want to learn more?
+- Información personal
+- Experiencia laboral
+- Proyectos
+- Habilidades
+- Certificaciones
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+## 🔧 Tecnologías Utilizadas
+
+- **Astro 5.13.5**: Framework principal
+- **Tailwind CSS 3.4.17**: Sistema de estilos
+- **TypeScript**: Tipado estático
+- **Vercel**: Deployment y hosting
+
+## 📱 Secciones del Portafolio
+
+1. **Header**: Navegación y logo
+2. **Hero**: Presentación principal con avatar
+3. **About**: Información personal y profesional
+4. **Experience**: Timeline de experiencia laboral
+5. **Skills**: Categorías de habilidades técnicas
+6. **Projects**: Proyectos destacados
+7. **Footer**: Información de contacto
+
+## 🎯 Principios Clean Code Aplicados
+
+- **Nombres descriptivos**: Variables y funciones con nombres claros
+- **Funciones pequeñas**: Cada función tiene una responsabilidad
+- **Comentarios útiles**: Solo donde es necesario
+- **Estructura clara**: Organización lógica de archivos
+- **Consistencia**: Patrones uniformes en todo el código
+
+## 🚀 Deployment
+
+El proyecto está configurado para deployment en **Vercel**:
+
+```bash
+# Instalar Vercel CLI
+npm i -g vercel
+
+# Deploy
+vercel --prod
+```
+
+## 📝 Licencia
+
+MIT License - Libre para uso personal y comercial.
+
+## 🤝 Contribuciones
+
+Las contribuciones son bienvenidas. Por favor:
+
+1. Fork el proyecto
+2. Crea una rama para tu feature
+3. Commit tus cambios
+4. Push a la rama
+5. Abre un Pull Request
+
+## 📞 Contacto
+
+- **Email**: Luk.riveros@gmail.com
+- **GitHub**: [Tu usuario]
+- **LinkedIn**: [Tu perfil]
+
+---
+
+Desarrollado con ❤️ usando Astro y principios SOLID

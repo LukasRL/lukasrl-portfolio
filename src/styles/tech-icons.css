@@ -1,0 +1,119 @@
+/* Estilos para los iconos de tecnologías */
+
+.tech-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 1.5rem;
+  height: 1.5rem;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: 0.375rem;
+  background: linear-gradient(135deg, #414559 0%, #51576d 100%);
+  color: #c6d0f5;
+  border: 1px solid #51576d;
+  transition: all 0.2s ease-in-out;
+}
+
+.tech-icon:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-color: #babbf1;
+}
+
+.tech-icon.special {
+  background: linear-gradient(135deg, #babbf1 0%, #ca9ee6 100%);
+  color: #303446;
+  border-color: #babbf1;
+}
+
+.tech-icon.special:hover {
+  background: linear-gradient(135deg, #ca9ee6 0%, #babbf1 100%);
+}
+
+/* Iconos específicos */
+.tech-icon[data-tech="JavaScript"] {
+  background: linear-gradient(135deg, #f7df1e 0%, #f0db4f 100%);
+  color: #000;
+}
+
+.tech-icon[data-tech="TypeScript"] {
+  background: linear-gradient(135deg, #3178c6 0%, #4d9cd6 100%);
+  color: #fff;
+}
+
+.tech-icon[data-tech="React.js"] {
+  background: linear-gradient(135deg, #61dafb 0%, #4fc3f7 100%);
+  color: #000;
+}
+
+.tech-icon[data-tech="React Native"] {
+  background: linear-gradient(135deg, #61dafb 0%, #4fc3f7 100%);
+  color: #000;
+}
+
+.tech-icon[data-tech="Angular"] {
+  background: linear-gradient(135deg, #dd0031 0%, #c3002f 100%);
+  color: #fff;
+}
+
+.tech-icon[data-tech="Node.js"] {
+  background: linear-gradient(135deg, #339933 0%, #4caf50 100%);
+  color: #fff;
+}
+
+.tech-icon[data-tech="Git"] {
+  background: linear-gradient(135deg, #f05032 0%, #e34c26 100%);
+  color: #fff;
+}
+
+.tech-icon[data-tech="AWS"] {
+  background: linear-gradient(135deg, #ff9900 0%, #f90 100%);
+  color: #000;
+}
+
+.tech-icon[data-tech="HTML5"] {
+  background: linear-gradient(135deg, #e34f26 0%, #f16529 100%);
+  color: #fff;
+}
+
+.tech-icon[data-tech="CSS3"] {
+  background: linear-gradient(135deg, #1572b6 0%, #33a9dc 100%);
+  color: #fff;
+}
+
+.tech-icon[data-tech="Sass"] {
+  background: linear-gradient(135deg, #cf649a 0%, #d63384 100%);
+  color: #fff;
+}
+
+.tech-icon[data-tech="SCSS"] {
+  background: linear-gradient(135deg, #cf649a 0%, #d63384 100%);
+  color: #fff;
+}
+
+.tech-icon[data-tech="PostgreSQL"] {
+  background: linear-gradient(135deg, #336791 0%, #4a90e2 100%);
+  color: #fff;
+}
+
+.tech-icon[data-tech="CI/CD"] {
+  background: linear-gradient(135deg, #ff6b6b 0%, #ee5a52 100%);
+  color: #fff;
+}
+
+/* Animaciones */
+@keyframes techIconPulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+.tech-icon.animate-pulse {
+  animation: techIconPulse 2s infinite;
+}

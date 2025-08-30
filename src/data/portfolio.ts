@@ -52,7 +52,6 @@ export const portfolioData = {
     iOS: "ios",
     Android: "android",
     "C#": "csharp",
-    PostgreSQL: "postgresql",
     "Database Migration": "migration",
     "Requirements Analysis": "requirements",
     "Problem Solving": "problem",

@@ -36,25 +36,13 @@ import TechIcon from '../ui/TechIcon.astro';
             </p>
             
             <!-- Tecnologías utilizadas -->
-            <div class="flex flex-wrap gap-2 mb-4">
+            <div class="flex flex-wrap gap-2">
               {project.tech.map((tech) => (
                 <span class="flex items-center gap-1.5 px-3 py-1 rounded-full text-sm border border-[#51576d] text-[#b5bfe2]">
                   <TechIcon tech={portfolioData.techIcons[tech] || tech} />
                   {tech}
                 </span>
               ))}
-            </div>
-            
-            <!-- Enlaces del proyecto -->
-            <div class="flex gap-3">
-              <a href={project.github} 
-                 class="flex-1 text-center px-4 py-2 bg-[#ea999c] text-[#303446] rounded-md hover:bg-[#f4b8b4] transition-colors font-medium">
-                GitHub
-              </a>
-              <a href={project.demo} 
-                 class="flex-1 text-center px-4 py-2 border border-[#ea999c] text-[#ea999c] rounded-md hover:bg-[#ea999c] hover:text-[#303446] transition-colors font-medium">
-                Demo
-              </a>
             </div>
           </div>
         </div>

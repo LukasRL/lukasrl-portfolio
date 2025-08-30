@@ -361,8 +361,11 @@ export const portfolioData = {
   ] as Education[],
 
   socialLinks: [
-    { name: "GitHub", url: "#" },
-    { name: "LinkedIn", url: "#" },
+    { name: "GitHub", url: "https://github.com/LukasRL" },
+    {
+      name: "LinkedIn",
+      url: "https://www.linkedin.com/in/lukas-riveros-letelier-79375712b/",
+    },
     { name: "Email", url: "mailto:Luk.riveros@gmail.com" },
   ] as SocialLink[],
 

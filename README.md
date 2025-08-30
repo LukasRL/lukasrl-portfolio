@@ -10,6 +10,7 @@ Un portafolio profesional desarrollado en **Astro** siguiendo principios **SOLID
 - **🎯 SOLID**: Arquitectura limpia y mantenible
 - **⚡ Performance**: Sitio estático optimizado
 - **🌙 Dark Theme**: Paleta de colores Catppuccin Frappé
+- **🔗 Enlaces Sociales**: GitHub y LinkedIn integrados
 
 ## 🏗️ Arquitectura SOLID
 
@@ -39,9 +40,7 @@ src/
 ├── data/               # Datos del portafolio
 ├── layouts/            # Layouts de Astro
 ├── pages/              # Páginas de la aplicación
-├── types/              # Definiciones de tipos TypeScript
-├── utils/              # Utilidades y helpers
-└── styles/             # Estilos globales
+└── types/              # Definiciones de tipos TypeScript
 ```
 
 ## 🚀 Instalación
@@ -70,10 +69,12 @@ pnpm preview
 
 El proyecto usa la paleta **Catppuccin Frappé**:
 
-- `--color-primary`: #babbf1 (Lavender)
-- `--color-secondary`: #ca9ee6 (Mauve)
-- `--color-accent`: #ea999c (Red)
-- `--color-success`: #a6e3a1 (Green)
+- **Base**: #303446 (Fondo principal)
+- **Mantle**: #292c3c (Fondo secundario)
+- **Text**: #c6d0f5 (Texto principal)
+- **Maroon**: #ea999c (Acentos e iconos)
+- **Mauve**: #ca9ee6 (Gradientes)
+- **Lavender**: #babbf1 (Efectos)
 
 ### Datos del Portafolio
 
@@ -88,19 +89,30 @@ Edita `src/data/portfolio.ts` para personalizar:
 ## 🔧 Tecnologías Utilizadas
 
 - **Astro 5.13.5**: Framework principal
-- **Tailwind CSS 3.4.17**: Sistema de estilos
+- **Tailwind CSS 3.4.0**: Sistema de estilos
 - **TypeScript**: Tipado estático
 - **Vercel**: Deployment y hosting
+- **pnpm**: Gestor de paquetes
 
 ## 📱 Secciones del Portafolio
 
-1. **Header**: Navegación y logo
-2. **Hero**: Presentación principal con avatar
+1. **Header**: Navegación y logo con botón de idioma
+2. **Hero**: Presentación principal con avatar y enlaces sociales
 3. **About**: Información personal y profesional
-4. **Experience**: Timeline de experiencia laboral
-5. **Skills**: Categorías de habilidades técnicas
-6. **Projects**: Proyectos destacados
-7. **Footer**: Información de contacto
+4. **Experience**: Timeline de experiencia laboral con acordeón
+5. **Skills**: Categorías de habilidades técnicas con iconos
+6. **Projects**: Proyectos destacados con tecnologías
+7. **Education**: Formación académica y certificaciones
+8. **Footer**: Información de contacto y enlaces sociales
+
+## 🎨 Características Técnicas
+
+- **Componentes Astro**: Arquitectura modular y reutilizable
+- **Tailwind CSS**: Sistema de diseño utilitario y responsive
+- **Iconos SVG**: Iconografía personalizada para tecnologías
+- **Acordeón interactivo**: Experiencia laboral expandible
+- **Navegación suave**: Scroll automático entre secciones
+- **Optimización**: Build estático para máxima performance
 
 ## 🎯 Principios Clean Code Aplicados
 
@@ -109,10 +121,19 @@ Edita `src/data/portfolio.ts` para personalizar:
 - **Comentarios útiles**: Solo donde es necesario
 - **Estructura clara**: Organización lógica de archivos
 - **Consistencia**: Patrones uniformes en todo el código
+- **Componentes modulares**: Separación clara de responsabilidades
+- **Tipos TypeScript**: Validación estática de datos
 
 ## 🚀 Deployment
 
 El proyecto está configurado para deployment en **Vercel**:
+
+- **Build Command**: `pnpm build`
+- **Output Directory**: `dist`
+- **Framework**: Astro
+- **Deploy automático** desde GitHub
+
+### Deploy Manual
 
 ```bash
 # Instalar Vercel CLI
@@ -139,8 +160,8 @@ Las contribuciones son bienvenidas. Por favor:
 ## 📞 Contacto
 
 - **Email**: Luk.riveros@gmail.com
-- **GitHub**: [Tu usuario]
-- **LinkedIn**: [Tu perfil]
+- **GitHub**: [@LukasRL](https://github.com/LukasRL)
+- **LinkedIn**: [Lukas Riveros Letelier](https://www.linkedin.com/in/lukas-riveros-letelier-79375712b/)
 
 ---
 

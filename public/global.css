@@ -1,0 +1,91 @@
+:root {
+  /* Colores principales del tema */
+  --theme-primary: #c6d0f5;
+  --theme-secondary: #414559;
+  --theme-tertiary: #8caaee;
+  --theme-surface0: #51576d;
+  --theme-surface1: #626880;
+  --theme-maroon: #ea999c;
+  --theme-green: #a6d189;
+
+  /* Colores de texto */
+  --theme-text: #c6d0f5;
+  --theme-subtext0: #a5adce;
+  --theme-subtext1: #b5bfe2;
+}
+
+/* Aplicar las variables CSS a las clases de utilidad */
+.bg-theme-primary {
+  background-color: var(--theme-primary);
+}
+.bg-theme-secondary {
+  background-color: var(--theme-secondary);
+}
+.bg-theme-tertiary {
+  background-color: var(--theme-tertiary);
+}
+.bg-theme-surface0 {
+  background-color: var(--theme-surface0);
+}
+.bg-theme-surface1 {
+  background-color: var(--theme-surface1);
+}
+.bg-theme-maroon {
+  background-color: var(--theme-maroon);
+}
+.bg-theme-green {
+  background-color: var(--theme-green);
+}
+
+.text-theme-primary {
+  color: var(--theme-primary);
+}
+.text-theme-secondary {
+  color: var(--theme-secondary);
+}
+.text-theme-tertiary {
+  color: var(--theme-tertiary);
+}
+.text-theme-surface0 {
+  color: var(--theme-surface0);
+}
+.text-theme-surface1 {
+  color: var(--theme-surface1);
+}
+.text-theme-maroon {
+  color: var(--theme-maroon);
+}
+.text-theme-green {
+  color: var(--theme-green);
+}
+.text-theme-text {
+  color: var(--theme-text);
+}
+.text-theme-subtext0 {
+  color: var(--theme-subtext0);
+}
+.text-theme-subtext1 {
+  color: var(--theme-subtext1);
+}
+
+.border-theme-primary {
+  border-color: var(--theme-primary);
+}
+.border-theme-secondary {
+  border-color: var(--theme-secondary);
+}
+.border-theme-tertiary {
+  border-color: var(--theme-tertiary);
+}
+.border-theme-surface0 {
+  border-color: var(--theme-surface0);
+}
+.border-theme-surface1 {
+  border-color: var(--theme-surface1);
+}
+.border-theme-maroon {
+  border-color: var(--theme-maroon);
+}
+.border-theme-green {
+  border-color: var(--theme-green);
+}

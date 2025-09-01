@@ -12,9 +12,9 @@ export const portfolioData = {
   personal: {
     name: "Lukas Riveros Letelier",
     title: "Desarrollador Front-End | React | Mobile",
-    email: "Luk.riveros@gmail.com",
+    email: "contact@lukasrl.dev",
     location: "Chile",
-    avatar: "/image.png", // Mantenido para compatibilidad, pero se usa la imagen optimizada
+    avatar: "/image.png",
     initials: "LR",
   },
 
@@ -366,7 +366,7 @@ export const portfolioData = {
       name: "LinkedIn",
       url: "https://www.linkedin.com/in/lukas-riveros-letelier-79375712b/",
     },
-    { name: "Email", url: "mailto:Luk.riveros@gmail.com" },
+    { name: "Email", url: "mailto:contact@lukasrl.dev" },
   ] as SocialLink[],
 
   industries: [

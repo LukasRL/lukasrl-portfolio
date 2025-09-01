@@ -157,7 +157,7 @@ Las contribuciones son bienvenidas. Por favor:
 
 ## 📞 Contacto
 
-- **Email**: Luk.riveros@gmail.com
+- **Email**: contact@lukasrl.dev
 - **GitHub**: [@LukasRL](https://github.com/LukasRL)
 - **LinkedIn**: [Lukas Riveros Letelier](https://www.linkedin.com/in/lukas-riveros-letelier-79375712b/)
 

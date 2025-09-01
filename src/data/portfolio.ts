@@ -14,7 +14,7 @@ export const portfolioData = {
     title: "Desarrollador Front-End | React | Mobile",
     email: "Luk.riveros@gmail.com",
     location: "Chile",
-    avatar: "/image.png",
+    avatar: "/image.png", // Mantenido para compatibilidad, pero se usa la imagen optimizada
     initials: "LR",
   },
 

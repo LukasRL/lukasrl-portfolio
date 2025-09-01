@@ -3,10 +3,10 @@ import { portfolioData } from '../../data/portfolio';
 import TechIcon from '../ui/TechIcon.astro';
 ---
 
-<section id="projects" class="py-24 px-4 border-t-2 border-[#414559]">
+<section id="projects" class="py-24 px-4 border-t-2 border-[#4a5568] bg-[#303446]">
   <div class="max-w-4xl mx-auto">
     <div class="text-left mb-12">
-      <h2 class="text-3xl font-bold flex items-center gap-3 text-[#c6d0f5]">
+      <h2 class="text-3xl font-bold flex items-center gap-3 text-[#f7fafc]">
         <svg class="w-8 h-8 text-[#ea999c]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
         </svg>
@@ -16,10 +16,10 @@ import TechIcon from '../ui/TechIcon.astro';
 
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
       {portfolioData.projects.map((project) => (
-        <div class="bg-[#414559] border border-[#51576d] rounded-lg overflow-hidden hover:border-[#ea999c] transition-colors">
+        <div class="bg-[#2d3748] border border-[#4a5568] rounded-lg overflow-hidden hover:border-[#ea999c] transition-colors">
           <!-- Placeholder de imagen del proyecto -->
-          <div class="h-48 bg-gradient-to-br from-[#51576d] to-[#414559] flex items-center justify-center">
-            <div class="text-center text-[#a5adce]">
+          <div class="h-48 bg-gradient-to-br from-[#4a5568] to-[#2d3748] flex items-center justify-center">
+            <div class="text-center text-[#e2e8f0]">
               <svg class="w-16 h-16 mx-auto mb-2 text-[#ea999c]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
               </svg>
@@ -28,17 +28,17 @@ import TechIcon from '../ui/TechIcon.astro';
           </div>
           
           <div class="p-6">
-            <h3 class="text-xl font-semibold text-[#c6d0f5] mb-2">
+            <h3 class="text-xl font-semibold text-[#f7fafc] mb-2">
               {project.title}
             </h3>
-            <p class="text-[#b5bfe2] mb-4">
+            <p class="text-[#e2e8f0] mb-4">
               {project.description}
             </p>
             
             <!-- Tecnologías utilizadas -->
             <div class="flex flex-wrap gap-2">
               {project.tech.map((tech) => (
-                <span class="flex items-center gap-1.5 px-3 py-1 rounded-full text-sm border border-[#51576d] text-[#b5bfe2]">
+                <span class="flex items-center gap-1.5 px-3 py-1 rounded-full text-sm border border-[#4a5568] text-[#e2e8f0] bg-[#1a202c]">
                   <TechIcon tech={portfolioData.techIcons[tech] || tech} />
                   {tech}
                 </span>

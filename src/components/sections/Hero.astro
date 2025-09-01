@@ -2,7 +2,7 @@
 import { portfolioData } from '../../data/portfolio';
 import TechIcon from '../ui/TechIcon.astro';
 import { Image } from 'astro:assets';
-import avatarImage from '../../assets/image.png';
+import { heroImage } from '../../assets/project-images';
 
 const topSkills = ["React", "React Native", "JavaScript", "TypeScript", "Node.js"];
 ---
@@ -16,7 +16,7 @@ const topSkills = ["React", "React Native", "JavaScript", "TypeScript", "Node.js
           <div class="w-48 h-48 lg:w-64 lg:h-64 transition-all duration-500 ease-out group-hover:scale-110 group-hover:rotate-2 cursor-pointer">
             <!-- Avatar con imagen optimizada de Astro -->
             <Image
-              src={avatarImage}
+              src={heroImage}
               alt={portfolioData.personal.name}
               width={256}
               height={256}

@@ -71,11 +71,11 @@ const { job, index, isExpanded } = Astro.props;
       </div>
       
       <!-- Contenido expandible -->
-      <div class="border-t border-[#4a5568] transition-all duration-300 overflow-hidden"
+      <div class="transition-all duration-300 overflow-hidden"
            class:list={[
              isExpanded ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
            ]}>
-        <div class="p-6 pt-4">
+        <div class="border-t border-[#4a5568] p-6 pt-4">
           <p class="text-[#e2e8f0] mb-4">{job.description}</p>
           
           <div class="flex flex-wrap gap-2">
@@ -99,14 +99,14 @@ const { job, index, isExpanded } = Astro.props;
     
     expandableItems.forEach(item => {
       item.addEventListener('click', () => {
-        const content = item.parentElement?.querySelector('.border-t');
+        const content = item.parentElement?.querySelector('.transition-all');
         const iconContainer = item.querySelector('[data-icon-container]');
         
         if (content && iconContainer) {
           const isExpanded = content.classList.contains('max-h-96');
           
           // Cerrar todos los otros acordeones
-          document.querySelectorAll('.border-t').forEach(otherContent => {
+          document.querySelectorAll('.transition-all').forEach(otherContent => {
             if (otherContent !== content) {
               otherContent.classList.remove('max-h-96', 'opacity-100');
               otherContent.classList.add('max-h-0', 'opacity-0');

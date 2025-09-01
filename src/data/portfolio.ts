@@ -307,6 +307,7 @@ export const portfolioData = {
       github: "#",
       demo: "#",
       image: "/abstract-geometric-shapes.png",
+      type: "mobile",
     },
     {
       title: "Dashboard TIBCO - Enel",
@@ -316,6 +317,7 @@ export const portfolioData = {
       github: "#",
       demo: "#",
       image: "/abstract-geometric-shapes.png",
+      type: "dashboard",
     },
     {
       title: "Sistema AMSA - React",
@@ -325,6 +327,7 @@ export const portfolioData = {
       github: "#",
       demo: "#",
       image: "/abstract-geometric-shapes.png",
+      type: "web",
     },
     {
       title: "App Móvil BICE",
@@ -334,6 +337,7 @@ export const portfolioData = {
       github: "#",
       demo: "#",
       image: "/abstract-geometric-shapes.png",
+      type: "mobile",
     },
   ] as Project[],
 

@@ -71,7 +71,7 @@ const { job, index, isExpanded } = Astro.props;
       </div>
       
       <!-- Contenido expandible -->
-      <div class="transition-all duration-300 overflow-hidden"
+      <div class="accordion-content transition-all duration-300 overflow-hidden"
            class:list={[
              isExpanded ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
            ]}>
@@ -99,14 +99,14 @@ const { job, index, isExpanded } = Astro.props;
     
     expandableItems.forEach(item => {
       item.addEventListener('click', () => {
-        const content = item.parentElement?.querySelector('.transition-all');
+        const content = item.parentElement?.querySelector('.accordion-content');
         const iconContainer = item.querySelector('[data-icon-container]');
         
         if (content && iconContainer) {
           const isExpanded = content.classList.contains('max-h-96');
           
           // Cerrar todos los otros acordeones
-          document.querySelectorAll('.transition-all').forEach(otherContent => {
+          document.querySelectorAll('.accordion-content').forEach(otherContent => {
             if (otherContent !== content) {
               otherContent.classList.remove('max-h-96', 'opacity-100');
               otherContent.classList.add('max-h-0', 'opacity-0');
@@ -125,12 +125,10 @@ const { job, index, isExpanded } = Astro.props;
             content.classList.remove('max-h-96', 'opacity-100');
             content.classList.add('max-h-0', 'opacity-0');
             iconContainer.classList.remove('rotate-180');
-            console.log('Cerrando acordeón, removiendo rotate-180');
           } else {
             content.classList.remove('max-h-0', 'opacity-0');
             content.classList.add('max-h-96', 'opacity-100');
             iconContainer.classList.add('rotate-180');
-            console.log('Abriendo acordeón, agregando rotate-180');
           }
         }
       });

@@ -19,6 +19,9 @@ const { job, index, isExpanded } = Astro.props;
 ---
 
 <div class="relative">
+  <!-- Fondo sólido para ocultar la línea del timeline -->
+  <div class="absolute left-3.5 w-5 h-5 rounded-full bg-[#303446]"></div>
+  
   <div class={`absolute left-4 w-4 h-4 rounded-full border-2 ${index === 0 ? "animate-pulse" : ""}`}
        class:list={[
          index === 0 ? "bg-[#a6e3a1] border-[#a6e3a1]" : "bg-[#2d3748] border-[#4a5568]"
@@ -37,8 +40,10 @@ const { job, index, isExpanded } = Astro.props;
             <h3 class="text-xl font-semibold text-[#f7fafc] mb-2">
               {job.title}
             </h3>
-            <div class="flex flex-wrap gap-4 text-[#e2e8f0] text-sm">
+            <div class="text-[#e2e8f0] text-sm mb-2">
               <span class="font-medium">{job.company}</span>
+            </div>
+            <div class="flex flex-wrap gap-4 text-[#e2e8f0] text-sm">
               <span class="flex items-center gap-1">
                 <svg class="w-4 h-4 text-[#ea999c]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>

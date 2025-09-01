@@ -78,7 +78,7 @@ export const portfolioData = {
       period: "2024 - Actualidad",
       location: "Chile",
       description:
-        "Lideré el desarrollo de la aplicación de fidelización móvil para Esmax (app aramco), asegurando despliegues exitosos en entornos dev-uat y producción (IOS/Android). Coordiné la integración entre células de desarrollo para garantizar entregas continuas y funcionales. Implementé estrategias de distribución interna (App Distribution) optimizando los tiempos de testing y QA.",
+        "Lideré el desarrollo de la aplicación de fidelización móvil para Esmax (app aramco) desde la célula frontend, asegurando despliegues exitosos en entornos dev-uat y producción (IOS/Android). Coordiné la integración entre células de desarrollo para garantizar entregas continuas y funcionales. Implementé estrategias de distribución interna (App Distribution) optimizando los tiempos de testing y QA.",
       skills: [
         "React Native",
         "JavaScript",

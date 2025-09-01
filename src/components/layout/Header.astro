@@ -5,7 +5,7 @@ import { portfolioData } from '../../data/portfolio';
 <header class="sticky top-0 z-50 backdrop-blur border-b border-theme-surface0 bg-theme-tertiary/95">
   <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between" id="#hero">
     <!-- Logo y nombre -->
-    <div class="flex items-center gap-4 min-w-0">
+    <a href="#hero" class="flex items-center gap-4 min-w-0 hover:opacity-80 transition-opacity cursor-pointer">
       <div class="relative">
         <div class="w-10 h-10 rounded-full flex items-center justify-center text-white font-bold text-sm shadow-lg ring-2 ring-[var(--accent-lavender)]/30 bg-gradient-to-br from-[var(--accent-lavender)] to-[var(--accent-mauve)]">
           {portfolioData.personal.initials}
@@ -15,7 +15,7 @@ import { portfolioData } from '../../data/portfolio';
       <h1 class="font-bold text-xl whitespace-nowrap text-theme-primary hidden sm:block">
         {portfolioData.personal.name.split(' ')[0]} {portfolioData.personal.name.split(' ')[1]}
       </h1>
-    </div>
+    </a>
 
     <!-- Navegación -->
     <nav class="hidden lg:flex items-center gap-6 flex-1 justify-center max-w-2xl">

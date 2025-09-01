@@ -12,9 +12,9 @@ export const portfolioData = {
   personal: {
     name: "Lukas Riveros Letelier",
     title: "Desarrollador Front-End | React | Mobile",
-    email: "Luk.riveros@gmail.com",
+    email: "contact@lukasrl.dev",
     location: "Chile",
-    avatar: "/image.png", // Mantenido para compatibilidad, pero se usa la imagen optimizada
+    avatar: "/image.png",
     initials: "LR",
   },
 
@@ -300,13 +300,14 @@ export const portfolioData = {
 
   projects: [
     {
-      title: "App Esmax (Aramco)",
+      title: "App Aramco Estaciones (Esmax)",
       description:
         "Aplicación móvil de fidelización desarrollada en React Native con despliegues en iOS y Android.",
       tech: ["React Native", "TypeScript", "CI/CD", "App Distribution"],
       github: "#",
       demo: "#",
       image: "/abstract-geometric-shapes.png",
+      type: "mobile",
     },
     {
       title: "Dashboard TIBCO - Enel",
@@ -316,6 +317,7 @@ export const portfolioData = {
       github: "#",
       demo: "#",
       image: "/abstract-geometric-shapes.png",
+      type: "dashboard",
     },
     {
       title: "Sistema AMSA - React",
@@ -325,23 +327,25 @@ export const portfolioData = {
       github: "#",
       demo: "#",
       image: "/abstract-geometric-shapes.png",
+      type: "web",
     },
     {
-      title: "App Móvil BICE",
+      title: "App Móvil - Banco BICE Personas",
       description:
         "Aplicación móvil bancaria desarrollada en React Native con pruebas unitarias completas.",
       tech: ["React Native", "JavaScript", "Unit Testing"],
       github: "#",
       demo: "#",
       image: "/abstract-geometric-shapes.png",
+      type: "mobile",
     },
   ] as Project[],
 
   certifications: [
     "Atención a requerimientos del cliente - Cahuala - 2014",
     "Java avanzado - Universidad Técnica Federico Santa María - 2016",
-    "Scrum Foundation Professional Certificate - SFPC - 2024",
-    "EFSET English Certificate C2 Proficient - EFSET - 2024",
+    "Scrum Foundation Professional Certificate - SFPC - 2022",
+    "EFSET English Certificate C2 Proficient - EFSET - 2023",
     "Diplomado DevOps - Universidad de Santiago - 2024",
     "Arquitecto Cloud V.13 - Universidad de Santiago - 2024",
     "DevSecOps - Universidad de Santiago - 2024",
@@ -366,7 +370,7 @@ export const portfolioData = {
       name: "LinkedIn",
       url: "https://www.linkedin.com/in/lukas-riveros-letelier-79375712b/",
     },
-    { name: "Email", url: "mailto:Luk.riveros@gmail.com" },
+    { name: "Email", url: "mailto:contact@lukasrl.dev" },
   ] as SocialLink[],
 
   industries: [

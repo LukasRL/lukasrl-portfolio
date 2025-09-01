@@ -6,6 +6,6 @@ export default defineConfig({
   output: "static",
   integrations: [tailwind()],
   adapter: vercel({
-    webAnalytics: { enabled: true },
+    webAnalytics: { enabled: false },
   }),
 });

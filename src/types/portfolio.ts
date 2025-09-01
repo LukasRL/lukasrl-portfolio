@@ -15,6 +15,7 @@ export interface Project {
   github?: string;
   demo?: string;
   image?: string | null;
+  type?: "mobile" | "web" | "dashboard" | "ecommerce" | "system";
 }
 
 export interface Education {

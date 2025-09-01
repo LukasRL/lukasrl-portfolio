@@ -18,11 +18,97 @@ const { title, description = "Portafolio de Lukas Riveros - Desarrollador Front-
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <title>{title}</title>
-    <link rel="stylesheet" href="/tech-icons.css" />
-    <link rel="stylesheet" href="/global.css" />
+    
+    <!-- CSS Crítico Inline -->
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        padding: 0;
+        line-height: 1.6;
+        background-color: #303446;
+        color: #c6d0f5;
+        font-family: system-ui, -apple-system, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+
+      /* Estilos críticos del header */
+      .sticky {
+        position: sticky;
+        top: 0;
+        z-index: 50;
+      }
+
+      .backdrop-blur {
+        backdrop-filter: blur(8px);
+      }
+
+      /* Estilos críticos de layout */
+      .flex {
+        display: flex;
+      }
+
+      .items-center {
+        align-items: center;
+      }
+
+      .justify-between {
+        justify-content: space-between;
+      }
+
+      .max-w-6xl {
+        max-width: 72rem;
+      }
+
+      .mx-auto {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .px-6 {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+      }
+
+      .h-16 {
+        height: 4rem;
+      }
+
+      /* Scrollbar personalizada */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background: #292c3c;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: #51576d;
+        border-radius: 4px;
+      }
+
+      ::-webkit-scrollbar-thumb:hover {
+        background: #ea999c;
+      }
+    </style>
+
+    <!-- Preload CSS no crítico -->
+    <link rel="preload" href="/tech-icons.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="/global.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    
+    <!-- Fallback para navegadores que no soportan preload -->
+    <noscript>
+      <link rel="stylesheet" href="/tech-icons.css" />
+      <link rel="stylesheet" href="/global.css" />
+    </noscript>
 
   </head>
-  <body class="bg-[#303446] text-[#c6d0f5] font-sans antialiased">
+  <body>
     <Header />
     <main>
       <slot />
@@ -32,35 +118,7 @@ const { title, description = "Portafolio de Lukas Riveros - Desarrollador Front-
 </html>
 
 <style>
-  * {
-    box-sizing: border-box;
-  }
-
-  body {
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-  }
-
-  /* Scrollbar personalizada */
-  ::-webkit-scrollbar {
-    width: 8px;
-  }
-
-  ::-webkit-scrollbar-track {
-    background: #292c3c;
-  }
-
-  ::-webkit-scrollbar-thumb {
-    background: #51576d;
-    border-radius: 4px;
-  }
-
-  ::-webkit-scrollbar-thumb:hover {
-    background: #ea999c;
-  }
-
-  /* Animaciones */
+  /* Animaciones no críticas */
   @keyframes fadeInUp {
     from {
       opacity: 0;

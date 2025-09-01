@@ -2,15 +2,15 @@
 import { portfolioData } from '../../data/portfolio';
 ---
 
-<header class="sticky top-0 z-50 backdrop-blur border-b border-theme-surface0 bg-theme-tertiary/95">
+<header class="sticky top-0 z-50 backdrop-blur border-b border-[#838ba7] bg-theme-tertiary/95">
   <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between" id="#hero">
     <!-- Logo y nombre -->
     <a href="#hero" class="flex items-center gap-4 min-w-0 hover:opacity-80 transition-opacity cursor-pointer">
       <div class="relative">
-        <div class="w-10 h-10 rounded-full flex items-center justify-center text-white font-bold text-sm shadow-lg ring-2 ring-[#ca9ee6]/30 bg-gradient-to-t from-[#ca9ee6] to-[#ef9f76]">
+        <div class="w-10 h-10 rounded-full flex items-center justify-center text-white font-bold text-sm shadow-lg ring-2 ring-[#8bd5ca] bg-gradient-to-t from-[#ca9ee6] to-[#ef9f76]">
           {portfolioData.personal.initials}
         </div>
-        <div class="absolute -bottom-0.5 -right-0.5 w-3 h-3 rounded-full border-2 border-theme-primary bg-theme-green"></div>
+        <div class="absolute -bottom-0.5 -right-0.5 w-3 h-3 rounded-full border-2 border-[#838ba7] bg-[#a6d189]"></div>
       </div>
       <h1 class="font-bold text-xl whitespace-nowrap text-theme-primary hidden sm:block">
         {portfolioData.personal.name.split(' ')[0]} {portfolioData.personal.name.split(' ')[1]}
@@ -41,13 +41,13 @@ import { portfolioData } from '../../data/portfolio';
 
     <!-- Botones - Centrados en móvil, derecha en desktop -->
     <div class="flex items-center gap-2 min-w-0 sm:ml-auto">
-      <button class="text-sm sm:text-xs px-4 sm:px-2 py-2 border border-theme-surface0 hover:bg-theme-surface1 hover:text-theme-primary bg-transparent text-theme-tertiary rounded-md transition-all font-medium flex items-center gap-2 sm:gap-1">
+      <button class="text-sm sm:text-xs px-4 sm:px-2 py-2 border border-[#838ba7] hover:bg-theme-surface1 hover:text-theme-primary bg-transparent text-theme-tertiary rounded-md transition-all font-medium flex items-center gap-2 sm:gap-1">
         <svg class="w-4 h-4 sm:w-3 sm:h-3 text-theme-maroon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path>
         </svg>
         <span class="hidden sm:inline">ES</span>
       </button>
-      <a href="mailto:contact@lukasrl.dev" class="text-sm sm:text-xs px-4 sm:px-2 py-2 border border-theme-surface0 hover:bg-theme-surface1 hover:text-theme-primary bg-transparent text-theme-tertiary rounded-md transition-all font-medium flex items-center gap-2 sm:gap-1">
+      <a href="mailto:contact@lukasrl.dev" class="text-sm sm:text-xs px-4 sm:px-2 py-2 border border-[#838ba7] hover:bg-theme-surface1 hover:text-theme-primary bg-transparent text-theme-tertiary rounded-md transition-all font-medium flex items-center gap-2 sm:gap-1">
         <svg class="w-4 h-4 sm:w-3 sm:h-3 text-theme-maroon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
         </svg>

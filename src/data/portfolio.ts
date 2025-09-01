@@ -300,7 +300,7 @@ export const portfolioData = {
 
   projects: [
     {
-      title: "App Esmax (Aramco)",
+      title: "App Aramco Estaciones (Esmax)",
       description:
         "Aplicación móvil de fidelización desarrollada en React Native con despliegues en iOS y Android.",
       tech: ["React Native", "TypeScript", "CI/CD", "App Distribution"],
@@ -330,7 +330,7 @@ export const portfolioData = {
       type: "web",
     },
     {
-      title: "App Móvil BICE",
+      title: "App Móvil - Banco BICE Personas",
       description:
         "Aplicación móvil bancaria desarrollada en React Native con pruebas unitarias completas.",
       tech: ["React Native", "JavaScript", "Unit Testing"],
@@ -344,8 +344,8 @@ export const portfolioData = {
   certifications: [
     "Atención a requerimientos del cliente - Cahuala - 2014",
     "Java avanzado - Universidad Técnica Federico Santa María - 2016",
-    "Scrum Foundation Professional Certificate - SFPC - 2024",
-    "EFSET English Certificate C2 Proficient - EFSET - 2024",
+    "Scrum Foundation Professional Certificate - SFPC - 2022",
+    "EFSET English Certificate C2 Proficient - EFSET - 2023",
     "Diplomado DevOps - Universidad de Santiago - 2024",
     "Arquitecto Cloud V.13 - Universidad de Santiago - 2024",
     "DevSecOps - Universidad de Santiago - 2024",

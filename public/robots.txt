@@ -1,0 +1,18 @@
+# Robots.txt para lukasrl.dev
+# Permite a todos los bots indexar el sitio
+
+User-agent: *
+Allow: /
+
+# Referencia al sitemap
+Sitemap: https://lukasrl.dev/sitemap.xml
+
+# Desallow para archivos de desarrollo (si los hay)
+Disallow: /node_modules/
+Disallow: /.git/
+Disallow: /.vercel/
+Disallow: /dist/
+Disallow: /.astro/
+
+# Información adicional
+# Crawl-delay: 1

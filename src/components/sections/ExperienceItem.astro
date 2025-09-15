@@ -78,14 +78,14 @@ const { job, index, isExpanded } = Astro.props;
       <!-- Contenido expandible -->
       <div class="accordion-content transition-all duration-300 overflow-hidden"
            class:list={[
-             isExpanded ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+             isExpanded ? "max-h-[600px] sm:max-h-96 opacity-100" : "max-h-0 opacity-0"
            ]}>
         <div class="border-t border-[#4a5568] p-6 pt-4">
           <p class="text-[#e2e8f0] mb-4">{job.description}</p>
           
-          <div class="flex flex-wrap gap-2">
+          <div class="flex flex-wrap gap-2 mb-2">
             {job.skills.map((skill) => (
-              <span class="flex items-center gap-1.5 px-3 py-1 rounded-full text-sm border border-[#4a5568] text-[#e2e8f0] bg-[#1a202c]">
+              <span class="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm border border-[#4a5568] text-[#e2e8f0] bg-[#1a202c]">
                 <TechIcon tech={portfolioData.techIcons[skill] || skill} />
                 {skill}
               </span>
@@ -108,12 +108,12 @@ const { job, index, isExpanded } = Astro.props;
         const iconContainer = item.querySelector('[data-icon-container]');
         
         if (content && iconContainer) {
-          const isExpanded = content.classList.contains('max-h-96');
+          const isExpanded = content.classList.contains('max-h-[600px]') || content.classList.contains('sm:max-h-96');
           
           // Cerrar todos los otros acordeones
           document.querySelectorAll('.accordion-content').forEach(otherContent => {
             if (otherContent !== content) {
-              otherContent.classList.remove('max-h-96', 'opacity-100');
+              otherContent.classList.remove('max-h-[600px]', 'sm:max-h-96', 'opacity-100');
               otherContent.classList.add('max-h-0', 'opacity-0');
             }
           });
@@ -127,12 +127,12 @@ const { job, index, isExpanded } = Astro.props;
           
           // Toggle del acordeón actual
           if (isExpanded) {
-            content.classList.remove('max-h-96', 'opacity-100');
+            content.classList.remove('max-h-[600px]', 'sm:max-h-96', 'opacity-100');
             content.classList.add('max-h-0', 'opacity-0');
             iconContainer.classList.remove('rotate-180');
           } else {
             content.classList.remove('max-h-0', 'opacity-0');
-            content.classList.add('max-h-96', 'opacity-100');
+            content.classList.add('max-h-[600px]', 'sm:max-h-96', 'opacity-100');
             iconContainer.classList.add('rotate-180');
           }
         }
